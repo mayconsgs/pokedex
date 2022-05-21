@@ -1,6 +1,6 @@
 import { TypeNames } from "./types";
 
-export type Ability = {
+type Ability = {
   ability: {
     name: string;
     url: string;
@@ -21,7 +21,7 @@ type PokemonMoveVersion = {
   };
 };
 
-export type PokemonMove = {
+type PokemonMove = {
   move: {
     name: string;
     url: string;
@@ -29,7 +29,7 @@ export type PokemonMove = {
   version_group_details: PokemonMoveVersion[];
 };
 
-export type PokemonSprites = {
+type PokemonSprites = {
   front_default: string;
   front_female: string | null;
   front_shiny: string;
@@ -61,7 +61,7 @@ type StatNames =
   | "accuracy"
   | "evasion";
 
-export type PokemonStat = {
+type PokemonStat = {
   base_stat: number;
   effort: number;
   stat: {
@@ -70,7 +70,7 @@ export type PokemonStat = {
   };
 };
 
-export type PokemonType = {
+type PokemonType = {
   slot: 1;
   type: {
     name: TypeNames;
@@ -91,4 +91,16 @@ export type Pokemon = {
   sprites: PokemonSprites;
   stats: PokemonStat;
   types: PokemonType[];
+};
+
+type PokemonRef = {
+  name: string;
+  url: string;
+};
+
+export type PokemonList = {
+  count: number;
+  next: string | null;
+  previous: string | null;
+  results: PokemonRef[];
 };
