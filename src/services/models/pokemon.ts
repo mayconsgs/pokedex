@@ -89,7 +89,7 @@ export type Pokemon = {
   abilities: Ability[];
   moves: PokemonMove[];
   sprites: PokemonSprites;
-  stats: PokemonStat;
+  stats: PokemonStat[];
   types: PokemonType[];
 };
 

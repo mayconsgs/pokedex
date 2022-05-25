@@ -4,7 +4,7 @@ import { client } from "../../services/client";
 import { PokemonList } from "../../services/models/pokemon";
 import * as S from "./styles";
 
-const LandingPage = () => {
+const Pokedex = () => {
   const { isLoading, data: pokemonList } = useQuery(
     "pokemon",
     async () =>
@@ -22,4 +22,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default Pokedex;

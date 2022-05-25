@@ -1,14 +1,19 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Error404 } from "./pages/Error404";
-import { LandingPage } from "./pages/LandingPage";
+import { lazy, Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
+
+const Error404 = lazy(() => import("./pages/Error404"));
+const LandingPage = lazy(() => import("./pages/LandingPage"));
+const Pokedex = lazy(() => import("./pages/Pokedex"));
 
 export const Router = () => {
   return (
-    <BrowserRouter>
+    <Suspense fallback={<div>Suspense</div>}>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/1" element={<Error404 />} />
+        <Route path="/" element={<LandingPage />}>
+          <Route path="pokedex" element={<Pokedex />} />
+        </Route>
+        <Route path="*" element={<Error404 />} />
       </Routes>
-    </BrowserRouter>
+    </Suspense>
   );
 };

@@ -7,4 +7,9 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
         box-sizing: border-box;
     }
+
+
+    body {
+        font-family: ${({ theme }) => theme.typography.family.karla}
+    }
 `;

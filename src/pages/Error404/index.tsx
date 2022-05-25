@@ -1,5 +1,7 @@
 import * as S from "./styles";
 
-export const Error404 = () => {
+const Error404 = () => {
   return <S.Container>Error 404</S.Container>;
 };
+
+export default Error404;

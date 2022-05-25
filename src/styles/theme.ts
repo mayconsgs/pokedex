@@ -1,21 +1,49 @@
-export const theme = {
-  colors: {
-    primary: "#F2B807",
-    secondary: "#F28F16",
-    third: "#F5DB13",
-    white: "#F2F2F2",
-    danger: "#D93E30",
-    dark: "#212121",
+import { TypeNames } from "../services/models/types";
 
-    blue: "#76AADB",
-    lightBlue: "#A2CFF0",
-    green: "#70A83B",
-    grey: "#A1A1A1",
-    orange: "#F76545",
-    brown: "#9B897B",
-    purple: "#A974BC",
-    yellow: "#F7C545",
-  },
+const colors = {
+  primary: "#F2B807",
+  secondary: "#F28F16",
+  third: "#F5DB13",
+  white: "#F2F2F2",
+  danger: "#D93E30",
+  dark: "#212121",
+
+  blue: "#76AADB",
+  lightBlue: "#A2CFF0",
+  green: "#70A83B",
+  grey: "#A1A1A1",
+  orange: "#F76545",
+  brown: "#9B897B",
+  purple: "#A974BC",
+  yellow: "#F7C545",
+};
+
+const pokemonTypeColor: { [key in TypeNames]: string } = {
+  steel: colors.grey,
+  dark: colors.grey,
+  rock: colors.grey,
+  grass: colors.green,
+  bug: colors.green,
+  ice: colors.lightBlue,
+  water: colors.lightBlue,
+  fire: colors.orange,
+  fighting: colors.orange,
+  dragon: colors.orange,
+  flying: colors.blue,
+  normal: colors.blue,
+  ghost: colors.blue,
+  poison: colors.purple,
+  psychic: colors.purple,
+  fairy: colors.purple,
+  shadow: colors.purple,
+  ground: colors.brown,
+  electric: colors.yellow,
+  unknown: colors.blue,
+};
+
+export const theme = {
+  colors,
+  pokemonTypeColor,
 
   typography: {
     sizes: {
