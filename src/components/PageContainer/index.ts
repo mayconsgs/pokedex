@@ -5,4 +5,6 @@ export const PageContainer = styled.main`
   min-height: calc(100vh - 92px);
   margin-left: auto;
   margin-right: auto;
+
+  padding: 1rem;
 `;

@@ -16,7 +16,7 @@ export type TranformerType = Record<TextStyles, ReturnType<typeof CssFunction>>;
 
 export type TypographyProps = {
   family?: Families;
-  textStyle: TextStyles;
+  textStyle?: TextStyles;
   color?: Colors;
 
   children?: ReactNode;

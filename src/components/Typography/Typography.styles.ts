@@ -28,7 +28,7 @@ const tranformer: TranformerType = {
 
 export const Texto = styled.p<TypographyProps>`
   ${({ textStyle, theme, color = "dark", family = "text" }) => css`
-    ${tranformer[textStyle]}
+    ${textStyle && tranformer[textStyle]}
 
     font-family: ${theme.typography.family[family]};
     color: ${theme.colors[color]};

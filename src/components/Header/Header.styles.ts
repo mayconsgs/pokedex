@@ -4,6 +4,7 @@ import styled, { css } from "styled-components";
 export const Header = styled.header`
   position: fixed;
   top: 0;
+  z-index: 1000;
 
   height: 92px;
   width: 100%;
