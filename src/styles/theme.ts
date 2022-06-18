@@ -16,7 +16,7 @@ const colors = {
   brown: "#9B897B",
   purple: "#A974BC",
   yellow: "#F7C545",
-};
+} as const;
 
 const pokemonTypeColor: { [key in TypeNames]: string } = {
   steel: colors.grey,
@@ -39,7 +39,7 @@ const pokemonTypeColor: { [key in TypeNames]: string } = {
   ground: colors.brown,
   electric: colors.yellow,
   unknown: colors.blue,
-};
+} as const;
 
 export const theme = {
   colors,
@@ -56,8 +56,8 @@ export const theme = {
       p: "1rem",
     },
     family: {
-      karla: "'Karla', sans-serif",
-      sourceSansPro: "'Source Sans Pro', sans-serif",
+      title: "'Karla', sans-serif",
+      text: "'Source Sans Pro', sans-serif",
     },
   },
 
@@ -68,4 +68,4 @@ export const theme = {
     large: "96px",
     xlarge: "120px",
   },
-};
+} as const;

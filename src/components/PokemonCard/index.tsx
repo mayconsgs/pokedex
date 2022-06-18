@@ -2,7 +2,8 @@ import { useMemo } from "react";
 import { useQuery } from "react-query";
 import { client } from "../../services/client";
 import { Pokemon } from "../../services/models/pokemon";
-import * as S from "./styles";
+import { Typography } from "../Typography";
+import * as S from "./PokemonCard.styles";
 
 type PokemonCardProps = {
   name: string;
@@ -30,21 +31,31 @@ export const PokemonCard: React.FC<PokemonCardProps> = ({ name }) => {
   return (
     <S.Card>
       <S.InfoContainer>
-        <S.PokemonName>{pokemon?.name}</S.PokemonName>
+        <S.PokemonName as="h1" textStyle="Title5">
+          {pokemon?.name}
+        </S.PokemonName>
 
         <div>
           <S.StatContainer>
             <S.Stats>
-              <S.StatsText>{attack?.base_stat}</S.StatsText>
+              <Typography textStyle="Paragraph" as="span">
+                {attack?.base_stat}
+              </Typography>
             </S.Stats>
-            <S.StatsLegend>Attack</S.StatsLegend>
+            <Typography as="span" textStyle="Title6">
+              Attack
+            </Typography>
           </S.StatContainer>
 
           <S.StatContainer>
             <S.Stats>
-              <S.StatsText>{defense?.base_stat}</S.StatsText>
+              <Typography textStyle="Paragraph" as="span">
+                {defense?.base_stat}
+              </Typography>
             </S.Stats>
-            <S.StatsLegend>Defense</S.StatsLegend>
+            <Typography as="span" textStyle="Title6">
+              Defense
+            </Typography>
           </S.StatContainer>
         </div>
 

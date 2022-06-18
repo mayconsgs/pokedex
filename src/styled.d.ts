@@ -5,4 +5,6 @@ type Theme = typeof theme;
 
 declare module "styled-components" {
   export interface DefaultTheme extends Theme {}
+
+  export type Colors = keyof typeof theme.colors;
 }

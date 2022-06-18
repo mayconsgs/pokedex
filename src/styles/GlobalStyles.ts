@@ -10,6 +10,6 @@ export const GlobalStyles = createGlobalStyle`
 
 
     body {
-        font-family: ${({ theme }) => theme.typography.family.karla}
+        font-family: ${({ theme }) => theme.typography.family.text}
     }
 `;

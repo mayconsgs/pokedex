@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { TypeNames } from "../../services/models/types";
+import { Typography } from "../Typography";
 
 export const Card = styled.article`
   display: flex;
@@ -18,9 +19,8 @@ export const InfoContainer = styled.main`
   justify-content: space-between;
 `;
 
-export const PokemonName = styled.h1`
+export const PokemonName = styled(Typography)`
   font-weight: bold;
-  font-size: ${({ theme }) => theme.typography.sizes.h5};
   text-transform: capitalize;
 `;
 
@@ -42,14 +42,6 @@ export const Stats = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
-
-export const StatsText = styled.span`
-  font-size: ${({ theme }) => theme.typography.sizes.p};
-`;
-
-export const StatsLegend = styled.span`
-  font-size: ${({ theme }) => theme.typography.sizes.h6};
 `;
 
 export const TypeContainer = styled.div`

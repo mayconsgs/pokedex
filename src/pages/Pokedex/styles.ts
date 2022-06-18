@@ -1,9 +1,7 @@
 import styled from "styled-components";
+import { PageContainer } from "../../components/PageContainer";
 
-export const Container = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-
+export const Container = styled(PageContainer)`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
