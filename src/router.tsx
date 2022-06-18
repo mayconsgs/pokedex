@@ -9,9 +9,8 @@ export const Router = () => {
   return (
     <Suspense fallback={<div>Suspense</div>}>
       <Routes>
-        <Route path="/" element={<LandingPage />}>
-          <Route path="pokedex" element={<Pokedex />} />
-        </Route>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="pokedex" element={<Pokedex />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
     </Suspense>

@@ -1,10 +1,14 @@
-import { Link as LinkComponent, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled, { css } from "styled-components";
 
 export const Header = styled.header`
   height: 92px;
   padding: 1rem;
   background-color: ${({ theme }) => theme.colors.third};
+
+  & + * {
+    margin-top: 92px;
+  }
 `;
 
 export const Container = styled.div`
@@ -31,16 +35,15 @@ export const NavItem = styled.li`
   }
 `;
 
-export const Link = styled(LinkComponent)`
+export const Link = styled(NavLink)`
   text-decoration: none;
 
-  ${({ theme, to }) => {
-    const current = useLocation().pathname === to;
+  ${({ theme }) => css`
+    font-size: ${theme.typography.sizes.h4};
+    color: ${theme.colors.dark};
 
-    return css`
-      font-size: ${theme.typography.sizes.h4};
-      color: ${theme.colors.dark};
-      border-bottom: ${current && `solid ${theme.colors.dark} 3px`};
-    `;
-  }}
+    &.active {
+      border-bottom: solid ${theme.colors.dark} 3px;
+    }
+  `}
 `;

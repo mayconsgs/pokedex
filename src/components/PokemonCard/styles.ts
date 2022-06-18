@@ -6,6 +6,7 @@ export const Card = styled.article`
   height: 137px;
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: 8px;
+  box-shadow: 4px 4px 4px rgba(33, 33, 33, 0.1);
 `;
 
 export const InfoContainer = styled.main`
@@ -60,6 +61,7 @@ export const TypeTag = styled.span<{ type: TypeNames }>`
   border-radius: 1rem;
   padding: 0.15rem 0.5rem;
   text-transform: capitalize;
+  box-shadow: inset 0 -3px rgba(0, 0, 0, 0.2);
 
   & + & {
     margin-left: 0.5rem;
