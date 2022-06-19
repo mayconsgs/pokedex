@@ -8,6 +8,14 @@ export const Card = styled.article`
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: 8px;
   box-shadow: 4px 4px 4px rgba(33, 33, 33, 0.1);
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    position: relative;
+
+    transform: scale(1.1);
+  }
 `;
 
 export const InfoContainer = styled.main`

@@ -26,7 +26,7 @@ export const Button = styled.button<ButtonProps>`
 
   ${({ theme, color = "green" }) => css`
     ${buttonTransform[color]}
-    font-size: ${theme.typography.sizes.p};
+    font-size: ${theme.typography.sizes.h4};
     font-family: ${theme.typography.family.title};
     color: ${theme.colors.dark}; ;
   `}

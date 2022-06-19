@@ -1,6 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { Header } from "./components/Header";
+import { Header } from "./components";
+
 import { ReactQuery } from "./reactQuery";
 import { Router } from "./router";
 import { GlobalStyles } from "./styles/GlobalStyles";

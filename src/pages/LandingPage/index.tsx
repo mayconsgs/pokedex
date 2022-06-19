@@ -1,4 +1,4 @@
-import { Typography } from "../../components/Typography";
+import { Typography } from "../../components";
 import * as S from "./styles";
 
 const LandingPage = () => {

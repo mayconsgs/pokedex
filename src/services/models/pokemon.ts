@@ -93,7 +93,7 @@ export type Pokemon = {
   types: PokemonType[];
 };
 
-type PokemonRef = {
+export type PokemonRef = {
   name: string;
   url: string;
 };

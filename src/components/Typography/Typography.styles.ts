@@ -27,10 +27,13 @@ const tranformer: TranformerType = {
 };
 
 export const Texto = styled.p<TypographyProps>`
-  ${({ textStyle, theme, color = "dark", family = "text" }) => css`
+  ${({ textStyle, theme, color = "dark", family = "text", weight }) => css`
     ${textStyle && tranformer[textStyle]}
 
     font-family: ${theme.typography.family[family]};
     color: ${theme.colors[color]};
+
+    font-weight: normal;
+    font-weight: ${weight};
   `}
 `;

@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import { Colors, css as CssFunction } from "styled-components";
 
 type Families = "title" | "text";
@@ -18,6 +17,5 @@ export type TypographyProps = {
   family?: Families;
   textStyle?: TextStyles;
   color?: Colors;
-
-  children?: ReactNode;
+  weight?: "bolder" | "lighter";
 };
